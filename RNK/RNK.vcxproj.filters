@@ -15,21 +15,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Desktop\RNK\DNK.cpp">
+    <ClCompile Include="DNK.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\RNK\RNK.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\RNK\Source.cpp">
+    <ClCompile Include="RNK.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Desktop\RNK\DNK.h">
+    <ClInclude Include="DNK.h">
       <Filter>Файлы исходного кода</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\RNK\RNK.h">
+    <ClInclude Include="RNK.h">
       <Filter>Файлы исходного кода</Filter>
     </ClInclude>
   </ItemGroup>
