@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="DNK.cpp" />
     <ClCompile Include="RNK.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DNK.h" />

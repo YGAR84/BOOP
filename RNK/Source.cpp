@@ -339,16 +339,18 @@ TEST(test_RNK, mem_leak) {
 	_CrtMemState stady1 = { 0 };//Результат памяти 1 
 	_CrtMemState stady2 = { 0 };//Результат памяти 2 
 
+	RNK rnk(1, A);
+
+	_CrtMemCheckpoint(&stady1); //Результат памяти 1
 
 
-	_CrtMemCheckpoint(&stady1); //Результат памяти 1 
 
-	RNK* rnk = new RNK;
-	for (int i = 0; i < 10000; ++i) {
-		rnk->pushback(Nucl(i % 4));
+	for (size_t i = 0; i < 5000000; ++i) {
+		rnk.pushback(Nucl(i % 4));
 	}
-	delete rnk;
+	rnk.trim(1);
 
+	
 	_CrtMemCheckpoint(&stady2); //Результат памяти 2 
 
 	_CrtMemState result = { 0 };

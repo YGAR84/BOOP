@@ -111,8 +111,8 @@ void RNK::trim(size_t pos) {
 		return;
 	}
 
-	int pos_in_chain = pos / num_of_nucles_in_chain_element;
-	int pos_in_chain_element = pos % num_of_nucles_in_chain_element;
+	size_t pos_in_chain = pos / num_of_nucles_in_chain_element;
+	size_t pos_in_chain_element = pos % num_of_nucles_in_chain_element;
 
 	size_t final_length = (pos_in_chain) + (pos_in_chain_element != 0);
 
@@ -121,6 +121,7 @@ void RNK::trim(size_t pos) {
 	for (size_t i = 0; i < final_length; ++i) {
 		buffer[i] = this->chain[i];
 	}
+
 	//pulling last element of chain by zeroes
 
 	buffer[final_length - 1] = (buffer[final_length - 1] >> (num_of_bits_in_chain_element - 2 * pos_in_chain_element)) << 
