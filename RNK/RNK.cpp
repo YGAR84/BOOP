@@ -341,7 +341,6 @@ RNK::reference::operator Nucl() const{
 	result >>= shift;
 	result &= mask;
 	return this->parent->get_nucl_name(result);
-	//return (Nucl)this->parent->get(this->iter);
 }
 void RNK::reference::put(Nucl nucl, size_t pos) const{
 	while (pos / num_of_nucles_in_chain_element >= this->parent->get_length()) {
